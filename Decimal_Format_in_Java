@@ -1,0 +1,10 @@
+import java.util.*;
+import java.text.DecimalFormat;
+public class Main{
+    public static void main(String args[]){
+        double number=9.76853;
+        DecimalFormat df=new DecimalFormat("#.##");
+        String num=df.format(number);
+        System.out.println(num);
+    }
+}
