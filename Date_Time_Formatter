@@ -1,0 +1,11 @@
+import java.time.*;
+import java.time.format.*;
+public class Main{
+    public static void main(String args[]){
+        LocalDateTime dt=LocalDateTime.now();
+        System.out.println("Before Formatting:"+dt);
+        DateTimeFormatter obj=DateTimeFormatter.ofPattern("dd-MM-YY HH-mm-ss");
+        String s=obj.format(dt);
+        System.out.println("After Formatting:"+s);
+    }
+}
