@@ -1,0 +1,21 @@
+import java.util.*;
+
+class AgeException extends Exception {
+    public AgeException(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+    public static void main(String args[]) {
+        Scanner s = new Scanner(System.in);
+        try {
+            int age = s.nextInt();
+            if (age < 0) {
+                throw new AgeException("Age cannot be negative");
+            }
+        } catch (AgeException ae) {
+            System.out.println(ae.getMessage());
+        }
+    }
+}
